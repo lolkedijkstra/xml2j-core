@@ -7,7 +7,7 @@
   <groupId>com.xml2j</groupId>
   <artifactId>xml2j</artifactId>
   <version>${xml2j.version}</version>
-  <name>LDX LIB</name>
+  <name>XML2J LIB</name>
   <description>${xml2j.description}</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
