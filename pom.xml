@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <properties>
   	<slf4j.version>1.7.21</slf4j.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.xml2j</groupId>
@@ -9,10 +10,9 @@
   <name>XML2J-CORE</name>
   <description>XML2J CORE LIBRARY</description>
   <build>
-    <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
-        <directory>src</directory>
+        <directory>src/main/java</directory>
         <excludes>
           <exclude>**/*.java</exclude>
         </excludes>
