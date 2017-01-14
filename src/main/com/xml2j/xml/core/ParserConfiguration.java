@@ -53,8 +53,8 @@ public class ParserConfiguration {
 
 	static Logger logger = LoggerFactory.getLogger(ParserConfiguration.class);
 	
-	/** first line in properties file must contain #LDX-PROPERTIES. */
-	static final String PROPERTIES_FILE = "#LDX-PROPERTIES";
+	/** first line in properties file must contain #XML2J-PROPERTIES. */
+	static final String PROPERTIES_FILE = "#XML2J-PROPERTIES";
 	
 	/** the properties bag. */
 	private Properties properties = null;
