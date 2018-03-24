@@ -35,10 +35,8 @@ public final class Compare {
 	 * @param q right object
 	 * @return true if p.equals(q) or both p and q == null
 	 */
-	static public boolean equals(Object p, Object q) {	
-		if (p==null)
-			return (q==null);
-		return p.equals(q);	
+	static public boolean equals(Object p, Object q) {
+		return (p==null) ? (q==null) : p.equals(q);
 	}
 	
 	static public boolean equals(boolean p, boolean q) {
@@ -52,11 +50,15 @@ public final class Compare {
 	static public boolean equals(char p, char q) {
 		return p==q;
 	}
-	
+
+	static public boolean equals(short p, short q) {
+		return p==q;
+	}
+
 	static public boolean equals(int p, int q) {
 		return p==q;
 	}
-	
+
 	static public boolean equals(float p, float q) {
 		return p==q;
 	}
