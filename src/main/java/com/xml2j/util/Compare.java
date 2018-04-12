@@ -36,7 +36,7 @@ public final class Compare {
 	 * @return true if p.equals(q) or both p and q == null
 	 */
 	static public boolean equals(Object p, Object q) {
-		return (p==null) ? (q==null) : p.equals(q);
+		return (p == q) || (p != null && p.equals(q));
 	}
 	
 	static public boolean equals(boolean p, boolean q) {
