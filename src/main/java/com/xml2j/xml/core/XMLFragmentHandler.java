@@ -1,7 +1,7 @@
 package com.xml2j.xml.core;
 
 /********************************************************************************
-Copyright 2016 Lolke B. Dijkstra
+Copyright 2016, 2018 Lolke B. Dijkstra
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in the
