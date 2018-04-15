@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <properties>
-  	<slf4j.version>1.7.21</slf4j.version>
+  	<slf4j.version>1.7.25</slf4j.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>	
@@ -11,7 +11,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.xml2j</groupId>
   <artifactId>xml2j-core</artifactId>
-  <version>2.4.0</version>
+  <version>2.4.2</version>
   <name>XML2J-CORE</name>
   <description>XML2J CORE LIBRARY</description>
 

@@ -457,6 +457,28 @@ public abstract class XMLFragmentHandler<T extends ComplexDataType> extends
 		}
 	}
 
+	/**
+	 * handle the element.
+	 */
+	protected void handleElement() {
+		// return control to parent handler..
+		this.deactivate();
+
+		// get content of this item..
+		getData().setContent(this.getValue());
+
+		// attach data to parent (if parent data setter is found)..
+		DataSetter setter = getParentDataSetter();
+		if (setter != null) {
+			setter.set(getData());
+		}
+
+		// process data if required..
+		if (doProcess()) {
+			process(XMLEvent.END);
+		}
+	}
+
 
 	/**
 	 * Attach attributes to the element data.
@@ -476,7 +498,7 @@ public abstract class XMLFragmentHandler<T extends ComplexDataType> extends
 	 * Checks whether processing is active for this handler.
 	 * @return true if active, false otherwise
 	 */
-	protected boolean doProcess() {
+	private boolean doProcess() {
 		return doProcess;
 	}
 
@@ -489,7 +511,7 @@ public abstract class XMLFragmentHandler<T extends ComplexDataType> extends
 	 *            indicates whether the process is called from START
 	 *            (startElement) or END (endElement)
 	 */
-	protected void process(XMLEvent evt) throws ProcessorException {
+	private void process(XMLEvent evt) throws ProcessorException {
 		if (doProcess) {
 			MessageProcessor processor = application.getDataProcessor();
 			if (processor == null) {
