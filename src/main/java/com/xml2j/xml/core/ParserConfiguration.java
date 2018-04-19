@@ -46,7 +46,7 @@ public class ParserConfiguration {
 	static final int MSG_ERR_LOG = 2;
 	
 	static final String[] msg = {
-		"LDX Configuation: invalid or missing data.",
+		"XML2J Configuation: invalid or missing data.",
 		"Could not process XML data. Reason: No properties found.",
 		"Unable to log parserConfiguration."
 	};
