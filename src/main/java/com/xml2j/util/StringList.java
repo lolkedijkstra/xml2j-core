@@ -29,21 +29,23 @@ import java.util.ArrayList;
  */
 public class StringList extends ArrayList<String> {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private String elementName = "";
 
 	/**
 	 * Constructor.
+	 *
 	 * @param elementName the name of the xml element.
 	 */
 	public StringList(final String elementName) {
-		this.elementName  = elementName;
+		this.elementName = elementName;
 	}
-	
+
 	/**
 	 * Equals compares this and that.
+	 *
 	 * @return true if the contents of this and that is identical, otherwise false
 	 */
 	public boolean equals(Object that) {
@@ -52,39 +54,20 @@ public class StringList extends ArrayList<String> {
 
 		if (!getClass().equals(that.getClass()))
 			return false;
-		
-		return this.elementName.equals(((StringList)that).elementName);
+
+		return this.elementName.equals(((StringList) that).elementName);
 	}
-	
+
 	/**
 	 * Method for printing the list.
+	 *
 	 * @param out where to print
 	 */
 	public void print(Printer out) {
 		for (String item : this) {
 			out.print("<" + elementName + ">");
-			out.print(item);				
+			out.print(item);
 			out.print("</" + elementName + ">");
 		}
 	}
-
-	
-//	public static void main(String args[]) {
-//		final String fileId = System.getenv("LDX_HOME") + "/tmp/stringlist.ser";
-//		
-//		StringList sl1 = new StringList("count");
-//		sl1.add(new String("one"));
-//		sl1.add(new String("two"));
-//		sl1.add(new String("three"));
-//		sl1.add(new String("four"));
-//		sl1.add(new String("five"));
-//		
-//		com.ldx.extra.Serialize.write( sl1, fileId );
-//		StringList sl2 = (StringList)com.ldx.extra.Serialize.read(fileId);
-//
-//		if (sl1.equals(sl2))
-//			sl2.print(new PrintStreamer(System.out));
-//		else 
-//			System.err.println("not equal");
-//	}
 }

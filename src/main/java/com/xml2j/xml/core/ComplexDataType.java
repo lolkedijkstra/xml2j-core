@@ -26,6 +26,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.xml2j.util.Compare;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,7 +63,13 @@ public abstract class ComplexDataType implements DataType, Serializable {
 				logger.trace("Passing null to equals");
 			return false;
 		}
-		
+
+		if (this == that) {
+			if (logger.isTraceEnabled())
+				logger.trace("this and that reference the same object.");
+			return true;
+		}
+
 		if (!getClass().equals(that.getClass())) {
 			if (logger.isTraceEnabled())
 				logger.trace("this.type {} not equal that.type {}", this.getClass(), that.getClass());
